@@ -1,0 +1,267 @@
+:root {
+  --primary: #3498db;
+  --footer-bg: #2c3e50;
+  --footer-text: #ecf0f1;
+
+  --bg-color: #a8edea;
+  --bg-color-2: #fed6e3;
+  --text-light: #222;
+  --text-dark: #eaeaea;
+  --card-bg-light: white;
+  --card-bg-dark: #2c2c3e;
+  --button-bg-light: var(--primary);
+  --button-bg-dark: #5a7bd8;
+  --button-hover-light: #2980b9;
+  --button-hover-dark: #3a53a0;
+}
+
+/* Gradient background & base styles */
+body {
+  background: linear-gradient(135deg, var(--bg-color), var(--bg-color-2));
+  color: var(--text-light);
+  font-family: 'Segoe UI', sans-serif;
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Header layout */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin: 0.3em 0 1em;
+}
+
+/* Navbar right aligned */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+.navbar a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.navbar a:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Cards style */
+.card {
+  background-color: var(--card-bg-light);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Buttons */
+button {
+  background-color: var(--button-bg-light);
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+button:hover {
+  background-color: var(--button-hover-light);
+}
+
+/* Inputs */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+input:focus, textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+/* Hidden class */
+.hidden {
+  display: none;
+}
+
+/* Error & success messages */
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+.success {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95rem;
+  margin-top: 40px;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  border-radius: 6px 6px 0 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* DARK THEME */
+[data-theme="dark"] {
+  --bg-color: #1e1e2f;
+  --bg-color-2: #2c2c3e;
+  --text-light: var(--text-dark);
+  --card-bg-light: var(--card-bg-dark);
+  --button-bg-light: var(--button-bg-dark);
+  --button-hover-light: var(--button-hover-dark);
+  --footer-bg: #141425;
+  --footer-text: #a8a8a8;
+}
+
+
+/* FAQ styles */
+.faq-item {
+  margin-bottom: 15px;
+}
+.faq-question {
+  width: 100%;
+  background: var(--button-bg-light);
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.faq-question:hover {
+  background: var(--button-hover-light);
+}
+.faq-answer {
+  padding: 10px;
+  background: var(--card-bg-light);
+  border-left: 4px solid var(--primary);
+  margin-top: 5px;
+  border-radius: 0 5px 5px 5px;
+  transition: max-height 0.3s ease;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-btn {
+  background-color: var(--button-bg-light);
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.dropdown-btn:hover {
+  background-color: var(--button-hover-light);
+}
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+  background-color: var(--card-bg-light);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  width: 150px;
+  z-index: 100;
+}
+.dropdown-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.dropdown-menu li:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Tabs */
+.tabs {
+  margin-top: 1em;
+}
+.tab-buttons {
+  display: flex;
+  gap: 10px;
+}
+.tab-btn {
+  background: var(--button-bg-light);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+.tab-btn.active {
+  background: var(--primary);
+}
+.tab-content {
+  background: var(--card-bg-light);
+  padding: 15px;
+  border-radius: 0 5px 5px 5px;
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
+/* Dark theme support for these components */
+[data-theme="dark"] .faq-question,
+[data-theme="dark"] .dropdown-btn,
+[data-theme="dark"] .tab-btn {
+  background-color: var(--button-bg-dark);
+  color: var(--text-light);
+}
+[data-theme="dark"] .faq-question:hover,
+[data-theme="dark"] .dropdown-btn:hover,
+[data-theme="dark"] .tab-btn.active {
+  background-color: var(--button-hover-dark);
+  color: white;
+}
+[data-theme="dark"] .faq-answer,
+[data-theme="dark"] .dropdown-menu,
+[data-theme="dark"] .tab-content {
+  background-color: var(--card-bg-dark);
+  color: var(--text-light);
+}
+[data-theme="dark"] .dropdown-menu li:hover {
+  background-color: var(--primary);
+  color: white;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alembesh Getaneh | Interactive Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-top">
+      <div>
+        <h1>Alembesh Getaneh</h1>
+        <p class="subtitle">Junior Developer • Designer • Project Manager</p>
+      </div>
+      <button id="themeToggle" aria-label="Toggle light/dark mode">🌗</button>
+    </div>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#counter">Counter Game</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#dropdown">Dropdown</a></li>
+        <li><a href="#tabs">Tabs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <section class="card" id="about">
+      <h2>About Me</h2>
+      <button id="toggleAboutBtn">Show/Hide Bio</button>
+      <p id="aboutText" class="hidden">
+        I'm Alembesh Getaneh, a junior software developer and creative web designer with a BSc in Computer Science from Hawassa University.
+        Currently Project Manager at Chromepay LLC, training SACCO cooperatives on digital payments.
+        Also a July 2025 PLP scholarship student passionate about agri-tech solutions connecting farmers and markets.
+      </p>
+    </section>
+
+    <!-- Counter Game -->
+    <section class="card" id="counter">
+      <h2>Counter Game</h2>
+      <p>Count: <span id="countValue">0</span></p>
+      <button id="incrementBtn">Increment +1</button>
+      <button id="decrementBtn">Decrement -1</button>
+      <button id="resetBtn">Reset</button>
+    </section>
+
+    <!-- Collapsible FAQ -->
+    <section class="card" id="faq">
+      <h2>FAQ - Click Questions to Toggle Answers</h2>
+      <div class="faq-item">
+        <button class="faq-question">What is your main programming language?</button>
+        <p class="faq-answer hidden">JavaScript, with HTML/CSS for web projects.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What projects are you passionate about?</button>
+        <p class="faq-answer hidden">Technology solutions to improve agriculture markets and payments.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Where did you study?</button>
+        <p class="faq-answer hidden">Hawassa University, BSc Computer Science.</p>
+      </div>
+    </section>
+
+    <!-- Simple Dropdown Menu -->
+    <section class="card" id="dropdown">
+      <h2>Simple Dropdown Menu</h2>
+      <div class="dropdown">
+        <button id="dropdownToggle" class="dropdown-btn">Select Option ▼</button>
+        <ul id="dropdownMenu" class="dropdown-menu hidden">
+          <li>Option 1</li>
+          <li>Option 2</li>
+          <li>Option 3</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Tabbed Interface -->
+<section class="card" id="tabs">
+  <h2>Tabbed Interface</h2>
+  <div class="tabs">
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="tab1">About Me</button>
+      <button class="tab-btn" data-tab="tab2">Experience</button>
+      <button class="tab-btn" data-tab="tab3">Future Goals</button>
+    </div>
+    <div class="tab-content active" id="tab1">
+      <p>
+        I’m Alembesh Getaneh, a junior software developer and creative web designer with a Bachelor of Science in Computer Science from Hawassa University. 
+        I am passionate about turning ideas into modern, functional digital experiences.
+      </p>
+    </div>
+    <div class="tab-content" id="tab2">
+      <p>
+        Currently, I work as a Project Manager at Chromepay LLC, training SACCO cooperatives and union workers on digital payment solutions and overseeing pilot technology implementations. 
+        I also have over a year of experience in photo editing and camerawork, enhancing my creative skill set.
+      </p>
+    </div>
+    <div class="tab-content" id="tab3">
+      <p>
+        My ultimate goal is to solve agriculture-based problems through technology, building platforms that connect farmers, buyers, and markets efficiently. 
+        I am a July 2025 software development scholarship student at Power Learn Project (PLP), continuously advancing my skills and innovation mindset.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <!-- Contact Form -->
+    <section class="card" id="contact">
+      <h2>Contact Me</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" id="name" />
+        <span class="error" id="nameError"></span>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" />
+        <span class="error" id="emailError"></span>
+
+        <label for="message">Message:</label>
+        <textarea id="message" rows="4"></textarea>
+        <span class="error" id="messageError"></span>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="formSuccess" class="success"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Alembesh Getaneh. Built with ❤️ and curiosity.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
